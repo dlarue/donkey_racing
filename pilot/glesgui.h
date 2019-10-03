@@ -2,6 +2,7 @@
 #define glesgui_h
 
 #include <unistd.h> /* for size_t */
+#include <stdint.h>
 
 #if defined(__cplusplus)
 extern "C" {
@@ -20,13 +21,17 @@ void gg_run(void (*idlefn)());
 /* set the quit flag so gg_run returns */
 void gg_set_quit_flag();
 
+void gg_get_viewport(int *owidth, int *oheight);
+
 struct Program {
+    /* uniforms locations */
     unsigned int vshader;
     unsigned int fshader;
     unsigned int program;
     unsigned int v_pos;
     unsigned int v_tex;
     unsigned int v_color;
+    unsigned int g_transform;
     unsigned int g_color;
     unsigned int g_tex;
 };
@@ -44,6 +49,7 @@ void gg_clear_named_programs();
 
 struct Texture {
     unsigned int texture;
+    unsigned int dbl_texture;
     unsigned int miplevels;
     unsigned int width;
     unsigned int height;
@@ -58,7 +64,7 @@ struct Texture {
  */
 void gg_allocate_texture(void const *data, unsigned int width, unsigned int height, unsigned int mipmaps, unsigned int format, Texture *oTex);
 /* given texture data for the top mipmap, update the texture images */
-void gg_update_texture(Texture *tex, unsigned int rowbytes, unsigned int left, unsigned int width, unsigned int top, unsigned int height);
+void gg_update_texture(Texture *tex, unsigned int left, unsigned int width, unsigned int top, unsigned int height);
 /* dispose an allocated texture */
 void gg_clear_texture(Texture *tex);
 /* load a texture on disk, and return texture pointer. Uses cache of loaded objects. Loaded 
@@ -68,7 +74,76 @@ Texture const *gg_load_named_texture(char const *name, char *error, size_t esize
 /* blow away the loaded texture cache, invalidating all the textures loaded */
 void gg_clear_named_textures();
 
+
+
+struct Mesh {
+    unsigned int vertexbuf;
+    unsigned int dbl_vertexbuf;
+    unsigned int vertexsize;
+    unsigned int numvertices;
+    unsigned int indexbuf;
+    unsigned int dbl_indexbuf;
+    unsigned int numindices;
+    unsigned char desc_tex;
+    unsigned char desc_color;
+    unsigned char _desc_r;
+    unsigned char flags;
+};
+
+#define MESH_FLAG_DYNAMIC 0x1
+#define MESH_FLAG_COLOR_BYTES 0x2
+#define MESH_FLAG_MAX 0x4
+
+void gg_allocate_mesh(void const *mdata, unsigned int vertexbytes, unsigned int numvertices, unsigned short const *indices, unsigned int numindices, unsigned int tex_offset, unsigned int color_offset, Mesh *oMesh, unsigned int flags);
+void gg_set_mesh(Mesh *mesh, void const *mdata, unsigned int numvertices, unsigned short const *indices, unsigned int numindices);
+void gg_clear_mesh(Mesh *mesh);
+Mesh const *gg_load_named_mesh(char const *name, char *error, size_t esize);
+void gg_clear_named_meshes();
+
+enum PrimitiveKind {
+    PK_Triangles,
+    PK_Lines
+};
+struct MeshDrawOp {
+    Program const *program;
+    Texture const *texture;
+    Mesh const *mesh;
+    float const *transform;
+    float color[4];
+    PrimitiveKind primitive;
+};
+void gg_set_program_transform(Program const *program, float const *transform);
+void gg_set_named_program_transforms(float const *transform);
+void gg_draw_mesh(MeshDrawOp const *draw);
+void gg_draw_text(float x, float y, float size, char const *text, uint32_t color);
+void gg_draw_box(float left, float bottom, float right, float top, uint32_t color);
+void gg_draw_line(float x1, float y1, float x2, float y2, uint32_t color);
+void gg_get_gui_transform(float *oMatrix);
+float const *gg_gui_transform();
+void gg_get_gl_errors(void (*func)(char const *error, void *cookie), void *cookie);
+void gg_break_gl_error(void (*func)(char const *error, void *cookie), void *cookie);
+
+void gg_init_color(float *d, float r, float g, float b, float a);
+
 #if defined(__cplusplus)
+namespace color {
+    extern uint32_t const white;
+    extern uint32_t const midgray;
+    extern uint32_t const black;
+
+    extern uint32_t const textgray;
+    extern uint32_t const textyellow;
+    extern uint32_t const textblue;
+    extern uint32_t const textred;
+    extern uint32_t const textgreen;
+
+    extern uint32_t const bggray;
+    extern uint32_t const bgyellow;
+    extern uint32_t const bgblue;
+    extern uint32_t const bgred;
+    extern uint32_t const bggreen;
+}
+
 }
 #endif
 

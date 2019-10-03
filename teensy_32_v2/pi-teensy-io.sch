@@ -1,0 +1,379 @@
+EESchema Schematic File Version 2
+LIBS:teensy_32_v2-rescue
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:teensy_3
+LIBS:MF_Aesthetics
+LIBS:MF_Connectors
+LIBS:MF_Discrete_Semiconductor
+LIBS:MF_Displays
+LIBS:MF_Frequency_Control
+LIBS:MF_IC_Analog
+LIBS:MF_IC_Digital
+LIBS:MF_IC_Power
+LIBS:MF_LEDs
+LIBS:MF_Passives
+LIBS:MF_Sensors
+LIBS:MF_Switches
+LIBS:teensy_32_v2-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RESISTOR_0805 R12
+U 1 1 59ED6992
+P 5600 3500
+F 0 "R12" V 5500 3400 45  0000 L BNN
+F 1 "MF-RES-0603-2K" V 5500 3550 45  0000 L BNN
+F 2 "MF_Passives:MF_Passives-R0603" H 5850 3410 20  0001 C CNN
+F 3 "" H 5600 3500 60  0001 C CNN
+	1    5600 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L RESISTOR_0805 R13
+U 1 1 59ED6A0D
+P 5600 3850
+F 0 "R13" V 5500 3750 45  0000 L BNN
+F 1 "MF-RES-0603-2K" V 5500 3900 45  0000 L BNN
+F 2 "MF_Passives:MF_Passives-R0603" H 5850 3760 20  0001 C CNN
+F 3 "" H 5600 3850 60  0001 C CNN
+	1    5600 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L RESISTOR_0805 R14
+U 1 1 59ED6E9C
+P 6000 2300
+F 0 "R14" V 5900 2200 45  0000 L BNN
+F 1 "MF-RES-0603-2K" V 5900 2350 45  0000 L BNN
+F 2 "MF_Passives:MF_Passives-R0603" H 6250 2210 20  0001 C CNN
+F 3 "" H 6000 2300 60  0001 C CNN
+	1    6000 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L RESISTOR_0805 R15
+U 1 1 59ED6EA2
+P 6350 2300
+F 0 "R15" V 6250 2200 45  0000 L BNN
+F 1 "MF-RES-0603-2K" V 6250 2350 45  0000 L BNN
+F 2 "MF_Passives:MF_Passives-R0603" H 6600 2210 20  0001 C CNN
+F 3 "" H 6350 2300 60  0001 C CNN
+	1    6350 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L CJ J5
+U 1 1 59ED707E
+P 4900 3500
+F 0 "J5" H 4900 3425 39  0000 C CNN
+F 1 "CJ" H 4900 3575 39  0000 C CNN
+F 2 "teensy:CJ-2" H 4900 3500 39  0001 C CNN
+F 3 "" H 4900 3500 39  0000 C CNN
+	1    4900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CJ J6
+U 1 1 59ED70B4
+P 4900 3850
+F 0 "J6" H 4900 3775 39  0000 C CNN
+F 1 "CJ" H 4900 3925 39  0000 C CNN
+F 2 "teensy:CJ-2" H 4900 3850 39  0001 C CNN
+F 3 "" H 4900 3850 39  0000 C CNN
+	1    4900 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CJ J3
+U 1 1 59ED70E0
+P 4900 2850
+F 0 "J3" H 4900 2775 39  0000 C CNN
+F 1 "CJ" H 4900 2925 39  0000 C CNN
+F 2 "teensy:CJ-2" H 4900 2850 39  0001 C CNN
+F 3 "" H 4900 2850 39  0000 C CNN
+	1    4900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CJ J4
+U 1 1 59ED7129
+P 4900 3100
+F 0 "J4" H 4900 3025 39  0000 C CNN
+F 1 "CJ" H 4900 3175 39  0000 C CNN
+F 2 "teensy:CJ-2" H 4900 3100 39  0001 C CNN
+F 3 "" H 4900 3100 39  0000 C CNN
+	1    4900 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR027
+U 1 1 59ED724A
+P 6350 950
+F 0 "#PWR027" H 6350 800 50  0001 C CNN
+F 1 "+3V3" H 6350 1090 50  0000 C CNN
+F 2 "" H 6350 950 50  0001 C CNN
+F 3 "" H 6350 950 50  0001 C CNN
+	1    6350 950 
+	1    0    0    -1  
+$EndComp
+Text HLabel 7300 2850 2    60   Input ~ 0
+R_SDA
+Text HLabel 7300 3100 2    60   Input ~ 0
+R_SCL
+Text HLabel 7300 3500 2    60   Input ~ 0
+R_TX
+Text HLabel 7300 3850 2    60   Input ~ 0
+R_RX
+Text HLabel 4000 2850 0    60   Input ~ 0
+T_SDA
+Text HLabel 4000 3100 0    60   Input ~ 0
+T_SCL
+Text HLabel 4000 3500 0    60   Input ~ 0
+T_RX3
+Text HLabel 4000 3850 0    60   Input ~ 0
+T_TX3
+$Comp
+L PCF8563 U4
+U 1 1 59ED946C
+P 4650 1850
+F 0 "U4" H 4350 2200 50  0000 L CNN
+F 1 "PCF8563TS/5,118" H 4750 2200 50  0000 L CNN
+F 2 "Housings_SSOP:TSSOP-8_3x3mm_Pitch0.65mm" H 4650 1850 50  0001 C CNN
+F 3 "" H 4650 1850 50  0001 C CNN
+	1    4650 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 59ED9DE4
+P 4650 2450
+F 0 "#PWR028" H 4650 2200 50  0001 C CNN
+F 1 "GND" H 4650 2300 50  0000 C CNN
+F 2 "" H 4650 2450 50  0001 C CNN
+F 3 "" H 4650 2450 50  0001 C CNN
+	1    4650 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Crystal Y1
+U 1 1 59ED9F2B
+P 4000 1850
+F 0 "Y1" H 4000 2000 50  0000 C CNN
+F 1 "SC20S-12.5PF20PPM" H 4000 1700 50  0000 C CNN
+F 2 "teensy:SC-20S" H 4000 1850 50  0001 C CNN
+F 3 "" H 4000 1850 50  0001 C CNN
+	1    4000 1850
+	0    1    1    0   
+$EndComp
+NoConn ~ 5050 1950
+NoConn ~ 5050 2050
+$Comp
+L DIODES_BAT42_SOD-123 D2
+U 1 1 59EDA477
+P 5000 1200
+F 0 "D2" H 5100 1050 45  0000 L BNN
+F 1 "BAT42" H 4850 1050 45  0000 L BNN
+F 2 "MF_Discrete_Semiconductor:MF_Discrete_Semiconductor-SOD-123" H 5188 1279 20  0001 C CNN
+F 3 "" H 5000 1200 60  0001 C CNN
+	1    5000 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG029
+U 1 1 59F89F7B
+P 4650 950
+F 0 "#FLG029" H 4650 1025 50  0001 C CNN
+F 1 "PWR_FLAG" H 4650 1100 50  0000 C CNN
+F 2 "" H 4650 950 50  0001 C CNN
+F 3 "" H 4650 950 50  0001 C CNN
+	1    4650 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODES_BAT42_SOD-123 D4
+U 1 1 5A1AF83E
+P 4250 1200
+F 0 "D4" H 4350 1050 45  0000 L BNN
+F 1 "BAT42" H 4100 1050 45  0000 L BNN
+F 2 "MF_Discrete_Semiconductor:MF_Discrete_Semiconductor-SOD-123" H 4438 1279 20  0001 C CNN
+F 3 "" H 4250 1200 60  0001 C CNN
+	1    4250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT1
+U 1 1 5A1AFB1F
+P 2400 1550
+F 0 "BT1" V 2300 1400 50  0000 L CNN
+F 1 "BC-2009-ND" V 2550 1250 50  0000 L CNN
+F 2 "teensy:BC-2009-ND" V 2400 1610 50  0001 C CNN
+F 3 "" V 2400 1610 50  0001 C CNN
+	1    2400 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAPACITOR_NP_0805 C?
+U 1 1 5A1C70AC
+P 2800 1850
+AR Path="/59ED6513/5A1C70AC" Ref="C?"  Part="1" 
+AR Path="/59ED67C6/5A1C70AC" Ref="C11"  Part="1" 
+F 0 "C11" V 2750 1650 45  0000 L BNN
+F 1 "MF-CAP-0805-0.1uF" V 2950 1450 45  0000 L BNN
+F 2 "MF_Passives:MF_Passives-C0805" H 3050 1760 20  0001 C CNN
+F 3 "" H 2800 1850 60  0001 C CNN
+	1    2800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAPACITOR_NP_0805 C?
+U 1 1 5A1C76F9
+P 3600 1850
+AR Path="/59ED6513/5A1C76F9" Ref="C?"  Part="1" 
+AR Path="/59ED67C6/5A1C76F9" Ref="C13"  Part="1" 
+F 0 "C13" V 3550 1650 45  0000 L BNN
+F 1 "MF-CAP-0402-8.2pF" V 3750 1450 45  0000 L BNN
+F 2 "MF_Passives:MF_Passives-C0402" H 3850 1760 20  0001 C CNN
+F 3 "" H 3600 1850 60  0001 C CNN
+	1    3600 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2850 7300 2850
+Wire Wire Line
+	4950 3100 7300 3100
+Wire Wire Line
+	6000 2500 6000 2850
+Connection ~ 6000 2850
+Wire Wire Line
+	6350 2500 6350 3100
+Connection ~ 6350 3100
+Wire Wire Line
+	4950 3500 5400 3500
+Wire Wire Line
+	4950 3850 5400 3850
+Wire Wire Line
+	5800 3500 7300 3500
+Wire Wire Line
+	5800 3850 7300 3850
+Wire Wire Line
+	6350 950  6350 2100
+Wire Wire Line
+	6000 2100 6000 1200
+Wire Wire Line
+	6000 1200 6350 1200
+Connection ~ 6350 1200
+Wire Wire Line
+	4850 2850 4000 2850
+Wire Wire Line
+	4850 3100 4000 3100
+Wire Wire Line
+	4850 3500 4000 3500
+Wire Wire Line
+	4850 3850 4000 3850
+Wire Wire Line
+	4650 950  4650 1450
+Wire Wire Line
+	4650 2250 4650 2450
+Wire Wire Line
+	5050 1650 5550 1650
+Wire Wire Line
+	5550 1650 5550 3100
+Connection ~ 5550 3100
+Wire Wire Line
+	5050 1750 5300 1750
+Wire Wire Line
+	5300 1750 5300 2850
+Connection ~ 5300 2850
+Wire Wire Line
+	4250 2050 4000 2050
+Wire Wire Line
+	4000 2050 4000 2000
+Wire Wire Line
+	4000 1650 4000 1700
+Wire Wire Line
+	4350 1200 4900 1200
+Wire Wire Line
+	5100 1200 5350 1200
+Wire Wire Line
+	5350 1200 5350 950 
+Wire Wire Line
+	2400 2350 4650 2350
+Wire Wire Line
+	2400 2350 2400 1650
+Connection ~ 4650 2350
+Connection ~ 4650 1200
+Wire Wire Line
+	4150 1200 2400 1200
+Wire Wire Line
+	2400 1200 2400 1350
+Wire Wire Line
+	2800 1750 2800 1400
+Wire Wire Line
+	2800 1400 4650 1400
+Connection ~ 4650 1400
+Wire Wire Line
+	2800 1950 2800 2350
+Connection ~ 2800 2350
+Wire Wire Line
+	3600 1750 3600 1650
+Connection ~ 4000 1650
+Wire Wire Line
+	3600 1950 3600 2350
+Connection ~ 3600 2350
+Wire Wire Line
+	3600 1650 4250 1650
+$Comp
+L +3V3 #PWR030
+U 1 1 5A46B84A
+P 5350 950
+F 0 "#PWR030" H 5350 800 50  0001 C CNN
+F 1 "+3V3" H 5350 1090 50  0000 C CNN
+F 2 "" H 5350 950 50  0001 C CNN
+F 3 "" H 5350 950 50  0001 C CNN
+	1    5350 950 
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
